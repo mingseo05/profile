@@ -1,0 +1,60 @@
+
+html, body{
+   height: 100%;
+}
+
+button {
+   width: 200px;
+   border-radius: 500px;
+}
+
+
+body{
+   background-color: pink;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.minus-title{
+   color: white;
+   font-size: 18px;
+   padding-bottom: 10px;
+}
+.minus-container{
+   display:inline-block;
+   position: relative;
+   width:100px;
+   height: 100px;
+}
+.minus,
+.minus::before,
+.minus::after {
+   position: absolute;
+   width: 100px;
+   height: 10px;
+   transition: 0.5s;
+   background: white;
+}
+.minus::before,
+.minus::after {
+   content: "";
+}
+.minus{
+   top: 50%
+}
+.minus::before {
+   top: -30px;
+}
+.minus::after {
+   top: 30px
+}
+.toggle:checked ~ .minus::after {
+   top: 0;
+}
+.toggle:checked ~ .minus::before {
+ top:0;
+}
+.toggle{
+   opacity:0;
+}
+
